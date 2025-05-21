@@ -103,11 +103,6 @@ struct HomePage: View {
                             path.append(Path.list)
                         }
                 }.padding(30)
-                //                    NavigationLink {
-                //                        ArchivePage()
-                //                    } label: {
-                //                        Image(systemName: "shippingbox.fill")
-                //                    }
                 Spacer().frame(height: 15)
 
                 HStack {
@@ -172,9 +167,8 @@ struct HomePage: View {
                         Image("closeball").resizable().frame(
                             width: 400, height: 400
                         )
-                        
-//                        ShakeDetector
-                        .onTapGesture {
+
+                        ShakeDetector {
                             isShowingBallPopUp.toggle()
                         }
                     }.fullScreenCover(
@@ -222,17 +216,7 @@ struct HomePage: View {
                             isShowingBallPopUp = false
                         }.presentationBackground(.ultraThinMaterial)
                     }
-                    //                            }.transaction {
-                    //                                transaction in
-                    //                                transaction.disablesAnimations = true
-                    //                            }
                 }
-                //                    NavigationLink {
-                //                        CreatePage(path: $path)
-                //                    } label: {
-                //                        Image("defaultball").resizable().frame(
-                //                            width: 320, height: 320)
-                //                    }
                 Spacer().frame(height: 40)
                 if !isTodayBallExist {
                     if !didOpenAllBalls {

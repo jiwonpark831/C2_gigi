@@ -24,10 +24,8 @@ struct DetailPage: View {
                     .cpink, .cblue,
                 ]), startPoint: .top, endPoint: .bottom)
             VStack {
+                Spacer()
                 VStack {
-                    //                    Text(
-                    //                        "\(CreatePage.today, formatter: CreatePage.dateformat)"
-                    //                    )
                     Spacer().frame(height: 30)
                     Text(ball.createDate).foregroundColor(.ctext).font(
                         .system(size: 24, weight: .bold))
@@ -53,11 +51,6 @@ struct DetailPage: View {
                     }.frame(width: 72, height: 40).foregroundColor(.cwhite)
                         .background(.ctext).cornerRadius(10).font(
                             .system(size: 16, weight: .semibold))
-                    //                        NavigationLink {
-                    //                            UpdatePage()
-                    //                        } label: {
-                    //                            Text("수정")
-                    //                        }
                     Button("삭제") {
                         removeButton = true
                     }.frame(width: 72, height: 40).foregroundColor(.cwhite)
@@ -75,6 +68,7 @@ struct DetailPage: View {
                             }
                         }
                 }.padding(.trailing, 50)
+                Spacer()
             }
         }.ignoresSafeArea(.all)
             .navigationBarBackButtonHidden(true)

@@ -58,6 +58,7 @@ struct CreatePage: View {
                 self.hideKeyboard()
             }
             VStack {
+                Spacer()
                 Text(
                     "\(CreatePage.today, formatter: CreatePage.dateformat)"
                 ).foregroundColor(.ctext).font(
@@ -69,34 +70,6 @@ struct CreatePage: View {
                 ).font(
                     .system(size: 16))
                 Spacer().frame(height: 50)
-                //                    ZStack {
-                //                        PhotosPicker(selection: $selectPic, matching: .images) {
-                //                            Image("selectpic").resizable().frame(
-                //                                width: 71, height: 44)
-                //                        }
-                //                        .onChange(of: selectPic) { uploadPic in
-                //                            Task {
-                //                                if let data = try? await uploadPic?
-                //                                    .loadTransferable(type: Data.self),
-                //                                    let img = UIImage(data: data)
-                //                                {
-                //                                    pic = Image(uiImage: img)
-                //                                } else {
-                //                                }
-                //                            }
-                //                        }
-                //
-                //                        if let image = pic {
-                //                            image
-                //                                .resizable()
-                //                                .scaledToFit()
-                //                                .frame(height: 169)
-                //                                .cornerRadius(10)
-                //                        }
-                //
-                //                    }.frame(width: 315, height: 191).background(
-                //                        Color("text2").opacity(0.7)
-                //                    ).cornerRadius(10)
 
                 PhotosPicker(selection: $selectPic, matching: .images) {
                     ZStack {
@@ -154,6 +127,7 @@ struct CreatePage: View {
                             title: Text("감사 구슬에 들어갈 내용이 충분하지 않아요"),
                             dismissButton: .cancel(Text("ok")))
                     }
+                Spacer()
             }
         }.ignoresSafeArea(.all)
             .navigationBarBackButtonHidden(true)

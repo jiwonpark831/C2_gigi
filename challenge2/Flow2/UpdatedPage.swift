@@ -20,7 +20,7 @@ struct UpdatedPage: View {
                     .cpink, .cblue,
                 ]), startPoint: .top, endPoint: .bottom)
             VStack {
-                Spacer().frame(height: 30)
+                Spacer()
                 (Text("구슬이 ").font(
                     .system(size: 20))
                     + Text("감사 저장소").font(
@@ -55,11 +55,7 @@ struct UpdatedPage: View {
                 }.frame(width: 315, height: 53).foregroundColor(.cwhite)
                     .background(.cpurple).cornerRadius(10).font(
                         .system(size: 20, weight: .semibold))
-                //                    NavigationLink {
-                //                        HomePage()
-                //                    } label: {
-                //                        Text("홈으로")
-                //                    }
+                Spacer()
             }
         }.ignoresSafeArea(.all)
             .navigationBarBackButtonHidden(true)

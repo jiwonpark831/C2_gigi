@@ -26,6 +26,7 @@ struct UpdatePage: View {
                     .cpink, .cblue,
                 ]), startPoint: .top, endPoint: .bottom)
             VStack {
+                Spacer()
                 Text(
                     "\(ball.createDate)"
                 ).foregroundColor(.ctext).font(
@@ -82,12 +83,7 @@ struct UpdatePage: View {
                 }.frame(width: 315, height: 53).foregroundColor(.cwhite)
                     .background(.cpurple).cornerRadius(10).font(
                         .system(size: 20, weight: .semibold))
-                //                    NavigationLink {
-                //                        UpdatedPage()
-                //                    } label: {
-                //                        Text("감사 저장소로 보내기")
-                //                    }
-
+                Spacer()
             }
         }.ignoresSafeArea(.all)
             .navigationBarBackButtonHidden(true)

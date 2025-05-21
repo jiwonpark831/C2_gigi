@@ -31,7 +31,7 @@ struct ArchivePage: View {
             ScrollView {
                 Spacer().frame(height: 90)
                 VStack {
-
+                    Spacer()
                     HStack {
                         VStack(alignment: .leading) {
                             (Text(
@@ -84,20 +84,8 @@ struct ArchivePage: View {
                                 ).foregroundColor(.cwhite).font(
                                     .system(size: 14)
                                 ).padding(.bottom, 30)
-                                //                                Text(
-                                //                                    ball.content)
                             }
-                            //                                NavigationLink {
-                            //                                    DetailPage()
-                            //                                } label: {
-                            //                                    VStack {
-                            //                                        Image(ball[index]).resizable().frame(
-                            //                                            width: 140, height: 140)
-                            //                                        Text(date[index])
-                            //                                    }
-                            //                                }
                         }
-
                     }.padding(30)
                 }
             }
